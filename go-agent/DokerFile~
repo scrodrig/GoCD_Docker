@@ -1,0 +1,7 @@
+FROM gocd/gocd-agent-ubuntu-14.04
+RUN apt-get update
+RUN apt-get -qq update
+RUN apt-get install -y nodejs npm
+RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
+
+ENV GO_SERVER_URL https://10.71.124.162:3500/go
