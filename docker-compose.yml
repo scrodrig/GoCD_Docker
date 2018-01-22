@@ -15,5 +15,6 @@ services:
     container_name: gocd-agent
     build:
       context: ./go-agent
+    command: [sh, -c, "systemctl start docker"]
     depends_on:
       - gocd-server
